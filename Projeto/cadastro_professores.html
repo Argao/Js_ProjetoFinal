@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Cadastrar Professor</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="SolMusic HTML Template" />
+  <meta name="keywords" content="music, html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Google font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/slicknav.min.css" />
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
+</head>
+
+<body onload="mostraCadastraFuncionarios(),verificaCadastroAlunoTurma(),verificaCadastroProfessorTurma()">
+  <!-- Page Preloder 
+             
+              <div id="preloder">
+                <div class="loader"></div>
+              </div>
+             -->
+
+  <!-- Header section -->
+  <header class="header-section clearfix">
+    <a href="./pag_funcionario.html" class="site-logo">
+      <img src="img/logo.png" alt="" />
+    </a>
+    <div class="header-right">
+      <div class="user-panel">
+        <a href="#" class="register" onclick="sair()">Sair</a>
+      </div>
+    </div>
+    <ul class="main-menu">
+      <li><a href="./relatorio_alunos.html">Relatório de Alunos</a></li>
+      <li>
+        <a href="#">Cadastros</a>
+        <ul class="sub-menu">
+          <li><a href="./cadastro_alunos.html">Cadastro de Alunos</a></li>
+          <li><a href="./cadastro_turmas.html">Cadastro de Turmas</a></li>
+          <li>
+            <a href="./cadastro_professores.html">Cadastro de Professores</a>
+          </li>
+          <li id="li_cadastroAlunoTurma">
+            <a href="./cadastro_aluno-turma.html">Cadastrar Aluno na Turma</a>
+          </li>
+          <li id = "li_cadastroProfessorTurma">
+            <a href="./cadastro_professor-turma.html">Cadastrar Professor na Turma</a>
+          </li>
+          <li id="li_cadastraFuncionario" style="display: none">
+            <a href="./cadastro_funcionario.html">Cadastrar Funcionário</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="./turmas_andamento.html">Turmas em Andamento</a></li>
+      <li><a href="./turmas_encerradas.html">Turmas em Encerradas</a></li>
+    </ul>
+  </header>
+  <section class="form_section">
+    <div class="minha">
+
+      <div class="form_box ">
+        <h2 class="meu-titulo">Cadastrar Professor</h2>
+        <div class="row">
+          <form action="" class="contact-from" name="formCadastroProfessor">
+            <div class="row">
+              <div class="col-md-12 ">
+                <input id="inputNomeProfessor" name="inputNomeProfessor" type="text" placeholder="Nome do Professor"
+                  placeholder="Nome da turma" class="meu-input">
+              </div>
+
+              <div class="form-group box-checkbox1 col-md-12 row ">
+                <label class="col-2 label-checkbox">Matérias:</label>
+                <div class="col-md-1"></div>
+                <div class="col-md-9 row">
+
+                  <div class="custom-control custom-checkbox custom-control-inline ">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_0" type="checkbox"
+                      class="custom-control-input" value="1">
+                    <label for="checkboxeMaterias_0" class="custom-control-label">Teclado e Piano</label>
+                  </div>
+
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_1" type="checkbox"
+                      class="custom-control-input" value="2">
+                    <label for="checkboxeMaterias_1" class="custom-control-label">Violão e Guitarra</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_2" type="checkbox"
+                      class="custom-control-input" value="3">
+                    <label for="checkboxeMaterias_2" class="custom-control-label">Baixo</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_3" type="checkbox"
+                      class="custom-control-input" value="4">
+                    <label for="checkboxeMaterias_3" class="custom-control-label">Bateria</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_4" type="checkbox"
+                      class="custom-control-input" value="5">
+                    <label for="checkboxeMaterias_4" class="custom-control-label">Percussão</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_5" type="checkbox"
+                      class="custom-control-input" value="6">
+                    <label for="checkboxeMaterias_5" class="custom-control-label">Canto</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_6" type="checkbox"
+                      class="custom-control-input" value="7">
+                    <label for="checkboxeMaterias_6" class="custom-control-label">Cordas</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_7" type="checkbox"
+                      class="custom-control-input" value="8">
+                    <label for="checkboxeMaterias_7" class="custom-control-label">Teoria</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_8" type="checkbox"
+                      class="custom-control-input" value="9">
+                    <label for="checkboxeMaterias_8" class="custom-control-label">Sopro</label>
+                  </div>
+                  <div class="custom-control custom-checkbox custom-control-inline">
+                    <input name="checkboxeMaterias" id="checkboxeMaterias_9" type="checkbox"
+                      class="custom-control-input" value="10">
+                    <label for="checkboxeMaterias_9" class="custom-control-label">Produção Musical</label>
+                  </div>
+
+                </div>
+
+              </div>
+            </div>
+
+
+          </form>
+          <div class="col-md-4">
+          </div>
+          <div class="col-md-4">
+            <button class="site-btn meu-bnt" onclick="cadastraProfessor()">Cadastrar</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+
+
+<!--====== Javascripts & Jquery ======-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="./meu.js"></script>
+
+</html>

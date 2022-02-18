@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <title>Cadastro de funcionários</title>
+  <meta charset="UTF-8" />
+  <meta name="description" content="SolMusic HTML Template" />
+  <meta name="keywords" content="music, html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Favicon -->
+  <link href="img/favicon.ico" rel="shortcut icon" />
+
+  <!-- Google font -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Montserrat:300,300i,400,400i,500,500i,600,600i,700,700i&display=swap"
+    rel="stylesheet" />
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="css/bootstrap.min.css" />
+  <link rel="stylesheet" href="css/font-awesome.min.css" />
+  <link rel="stylesheet" href="css/owl.carousel.min.css" />
+  <link rel="stylesheet" href="css/slicknav.min.css" />
+
+  <!-- Main Stylesheets -->
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!--[if lt IE 9]>
+                  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+                  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+                <![endif]-->
+</head>
+
+<body onload="verificaCadastroAlunoTurma(),verificaCadastroProfessorTurma(),mostraCadastraFuncionarios()">
+  <!-- Page Preloder 
+             
+              <div id="preloder">
+                <div class="loader"></div>
+              </div>
+             -->
+
+  <!-- Header section -->
+  <header class="header-section clearfix">
+    <a href="./pag_funcionario.html" class="site-logo">
+      <img src="img/logo.png" alt="" />
+    </a>
+    <div class="header-right">
+      <div class="user-panel">
+        <a href="#" class="register" onclick="sair()">Sair</a>
+      </div>
+    </div>
+    <ul class="main-menu">
+      <li><a href="./relatorio_alunos.html">Relatório de Alunos</a></li>
+      <li>
+        <a href="#">Cadastros</a>
+        <ul class="sub-menu">
+          <li><a href="./cadastro_alunos.html">Cadastro de Alunos</a></li>
+          <li><a href="./cadastro_turmas.html">Cadastro de Turmas</a></li>
+          <li>
+            <a href="./cadastro_professores.html">Cadastro de Professores</a>
+          </li>
+          <li id="li_cadastroAlunoTurma">
+            <a href="./cadastro_aluno-turma.html">Cadastrar Aluno na Turma</a>
+          </li>
+          <li id = "li_cadastroProfessorTurma">
+            <a href="./cadastro_professor-turma.html">Cadastrar Professor na Turma</a>
+          </li>
+          <li id="li_cadastraFuncionario" style="display: none">
+            <a href="./cadastro_funcionario.html">Cadastrar Funcionário</a>
+          </li>
+        </ul>
+      </li>
+      <li><a href="./turmas_andamento.html">Turmas em Andamento</a></li>
+      <li><a href="./turmas_encerradas.html">Turmas em Encerradas</a></li>
+    </ul>
+  </header>
+  <section class="form_section">
+    <div class="minha">
+
+      <div class="form_box ">
+        <h2 class="meu-titulo">Cadastrar Funcionário</h2>
+
+        <form action="" class="contact-from" name="formCadastroFuncionarios">
+          <div class="row">
+            <div class="col-md-3"></div>
+            <div class="col-md-6 ">
+              <input id="inputNomeFuncionario" name="inputNomeFuncionario" type="text" placeholder="Nome do funcionário"
+                class="meu-input">
+            </div>
+            <div class="col-md-3"></div>
+
+
+            <div class="col-md-3"></div>
+            <div class="col-md-6 ">
+              <input id="inputLoginCadastroFuncionario" name="inputLoginCadastroFuncionario" type="text"
+                placeholder="Cadastrar login" class="meu-input">
+            </div>
+            <div class="col-md-3"></div>
+            <div class="col-md-3"></div>
+            <div class="col-md-6 ">
+              <input id="inputSenhaCadastroFuncionario" name="inputSenhaCadastroFuncionario" type="password"
+                placeholder="Cadastrar senha" class="meu-input">
+            </div>
+            <div class="col-md-3"></div>
+
+            <div class="col-md-3"></div>
+            <div class="col-md-9 ">
+              <label class="meu-radio" for="radioAdm">Permissão de administrador?</label>
+            </div>
+
+            <div class="col-md-3"></div>
+            <div class="col-md-9" style="padding-top:10px ;padding-left: 20px;">
+
+              <label class="meu-radio" for="radioAdm-0">
+                <input type="radio" name="radioAdm" id="radioAdm-0" value="sim" checked="checked">
+                sim
+              </label>
+              <label class="meu-radio" for="radioAdm-1">
+                <input type="radio" name="radioAdm" id="radioAdm-1" value="nao">
+                não
+              </label>
+            </div>
+          </div>
+        </form>
+        <div class="row">
+          <div class="col-md-4"></div>
+          <div class="col-md-4">
+            <button class="site-btn meu-bnt" onclick="cadastraFuncionario()">Cadastrar</button>
+          </div>
+          <div class="col-md-4"></div>
+        </div>
+      </div>
+    </div>
+
+  </section>
+</body>
+
+
+
+<!--====== Javascripts & Jquery ======-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"
+  integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="js/jquery-3.2.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.slicknav.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/mixitup.min.js"></script>
+<script src="js/main.js"></script>
+
+<script src="./meu.js"></script>
+
+</html>
